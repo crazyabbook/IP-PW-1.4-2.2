@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+body {
+    margin: 0;
+    font-family: "Montserrat";
+}
+header {
+    padding: clamp(50px, 10vw, 120px) clamp(50px, 10vw, 150px) clamp(50px, 10vw, 120px) clamp(50px, 10vw, 150px);
+    background-color: #4694DC;
+}
+h1 {
+    margin: 0;
+    font-size: clamp(28px, 8vw, 56px);
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+header > p {
+    margin: 34px 0 48px 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+button {
+    border: 0;
+    padding: 18px 38px 18px 38px;
+    font-family: "Montserrat";
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services {
+    margin: clamp(50px, 10vw, 100px) 0 0 0;
+}
+.title {
+    margin: 0 clamp(30px, 15vw, 212px);
+    text-align: center;
+}
+h2 {
+    margin: 0 0 0 0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 3.3px;
+    text-transform: uppercase;
+}
+.title > p {
+    margin: 24px 0 0 0;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    line-height: 24px;
+    color: #9CA3AF;
+}
+.services > div:last-child {
+    margin: clamp(30px, 10vw, 80px) 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.services > div:last-child > div {
+    min-height: 180px;
+    flex: 1 1 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+.services > div:last-child > div > img {
+    margin: 40px 0 0 0;
+    width: 50px;
+    height: 50px;
+}
+.services > div:last-child > div:nth-child(1) > img {
+    margin: 28px 0 0 0;
+    width: 85px;
+    height: 85px;
+}
+.services > div:last-child > div > p {
+    margin: 0 0 40px 0;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #9CA3AF;
+}
+.team {
+    margin: clamp(50px, 10vw, 160px) 0 clamp(50px, 10vw, 140px) 0;
+}
+.team > div:last-child {
+    margin: clamp(30px, 10vw, 80px) 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.team > div:last-child > div {
+    border-radius: 10px;
+    box-shadow: 0px 4px 70px 0px rgba(91, 93, 99, 0.06);
+    flex: 0 0 260px;
+    display: flex;
+    align-items: center;
+}
+h3 {
+    margin: 0 0 5px 0;
+    height: 13px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 26px;
+}
+.role {
+    margin: 0 0 15px 0;
+    height: 13px;
+    font-size: 11px;
+    font-style: italic;
+    line-height: 26px;
+    text-transform: capitalize;
+    color: #9CA3AF;
+}
+.photo {
+    margin: 20px 8px 20px 20px;
+}
+
+
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(30, 80, 140, 0.5);
+}
+
+@keyframes scrollInLeft {
+    from { opacity: 0; transform: translateX(-300px); }
+    to   { opacity: 1; transform: translateX(0);      }
+}
+.scroll-in-left {
+    animation: scrollInLeft 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 60%;
+}
+
+@keyframes scrollInRight {
+    from { opacity: 0; transform: translateX(300px); }
+    to   { opacity: 1; transform: translateX(0);     }
+}
+.scroll-in-right {
+    animation: scrollInRight 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 60%;
+}
+
+@keyframes blur {
+    from { opacity: 0; transform: translateY(30px); filter: blur(8px); }
+    to   { opacity: 1; transform: translateY(0); filter: blur(0);      }
+}
+.animation-blur {
+    animation: blur 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 60%;
+}
